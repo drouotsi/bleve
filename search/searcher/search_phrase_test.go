@@ -442,6 +442,16 @@ func TestFindPhrasePathsSloppy(t *testing.T) {
 			phrase: [][]string{{"one"}, {"five"}},
 			slop:   2,
 		},
+		{
+			phrase: [][]string{{"one"}, {"four"}},
+			slop:   2,
+			paths: []phrasePath{
+				{
+					phrasePart{"one", &search.Location{Pos: 1}},
+					phrasePart{"four", &search.Location{Pos: 4}},
+				},
+			},
+		},
 		// should match
 		{
 			phrase: [][]string{{"one"}, {"five"}},
@@ -503,6 +513,41 @@ func TestFindPhrasePathsSloppy(t *testing.T) {
 		},
 		// slop should be cumulative
 		{
+			phrase: [][]string{{"one"}, {"three"}},
+			slop:   1,
+			paths: []phrasePath{
+				{
+					phrasePart{"one", &search.Location{Pos: 1}},
+					phrasePart{"three", &search.Location{Pos: 3}},
+				},
+			},
+		},
+		{
+			phrase: [][]string{{"three"}, {"five"}},
+			slop:   1,
+			paths: []phrasePath{
+				{
+					phrasePart{"three", &search.Location{Pos: 3}},
+					phrasePart{"five", &search.Location{Pos: 5}},
+				},
+			},
+		},
+		{
+			phrase: [][]string{{"one"}, {"three"}, {"five"}},
+			slop:   1,
+			paths: []phrasePath{
+				{
+					phrasePart{"one", &search.Location{Pos: 1}},
+					phrasePart{"three", &search.Location{Pos: 3}},
+					phrasePart{"five", &search.Location{Pos: 5}},
+				},
+			},
+		},
+		{
+			phrase: [][]string{{"three"}, {"one"}, {"five"}},
+			slop:   1,
+		},
+		{
 			phrase: [][]string{{"one"}, {"three"}, {"five"}},
 			slop:   2,
 			paths: []phrasePath{
@@ -517,6 +562,13 @@ func TestFindPhrasePathsSloppy(t *testing.T) {
 		{
 			phrase: [][]string{{"five"}, {"three"}, {"one"}},
 			slop:   5,
+			paths: []phrasePath{
+				{
+					phrasePart{"five", &search.Location{Pos: 5}},
+					phrasePart{"three", &search.Location{Pos: 3}},
+					phrasePart{"one", &search.Location{Pos: 1}},
+				},
+			},
 		},
 		// so lets try 6
 		{

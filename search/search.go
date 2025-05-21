@@ -371,6 +371,7 @@ type SearcherOptions struct {
 	Explain            bool
 	IncludeTermVectors bool
 	Score              string
+	Slop               int
 }
 
 // SearchContext represents the context around a single search

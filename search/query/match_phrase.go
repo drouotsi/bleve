@@ -30,6 +30,7 @@ type MatchPhraseQuery struct {
 	FieldVal    string `json:"field,omitempty"`
 	Analyzer    string `json:"analyzer,omitempty"`
 	BoostVal    *Boost `json:"boost,omitempty"`
+	Slop        int    `json:"slop,omitempty"`
 	Fuzziness   int    `json:"fuzziness"`
 	autoFuzzy   bool
 }
@@ -59,6 +60,10 @@ func (q *MatchPhraseQuery) Boost() float64 {
 
 func (q *MatchPhraseQuery) SetField(f string) {
 	q.FieldVal = f
+}
+
+func (q *MatchPhraseQuery) SetSlop(slop int) {
+	q.Slop = slop
 }
 
 func (q *MatchPhraseQuery) SetFuzziness(f int) {
@@ -95,6 +100,7 @@ func (q *MatchPhraseQuery) Searcher(ctx context.Context, i index.IndexReader, m 
 		phrase := tokenStreamToPhrase(tokens)
 		phraseQuery := NewMultiPhraseQuery(phrase, field)
 		phraseQuery.SetBoost(q.BoostVal.Value())
+		options.Slop = q.Slop
 		if q.autoFuzzy {
 			phraseQuery.SetAutoFuzziness(true)
 		} else {

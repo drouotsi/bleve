@@ -41,6 +41,7 @@ type PhraseSearcher struct {
 	paths        []phrasePath
 	locations    []search.Location
 	initialized  bool
+	slop         int
 	// map a term to a list of fuzzy terms that match it
 	fuzzyTermMatches map[string][]string
 }
@@ -214,6 +215,7 @@ func NewMultiPhraseSearcher(ctx context.Context, indexReader index.IndexReader, 
 		mustSearcher:     mustSearcher,
 		terms:            terms,
 		fuzzyTermMatches: fuzzyTermMatches,
+		slop:             options.Slop,
 	}
 	rv.computeQueryNorm()
 	return &rv, nil
@@ -351,7 +353,7 @@ func (s *PhraseSearcher) checkCurrMustMatchField(ctx *search.SearchContext,
 		s.expandFuzzyMatches(tlm, expandedTlm)
 		tlmPtr = &expandedTlm
 	}
-	s.paths = findPhrasePaths(0, nil, s.terms, *tlmPtr, s.path[:0], 0, s.paths[:0])
+	s.paths = findPhrasePaths(0, nil, s.terms, *tlmPtr, s.path[:0], s.slop, s.paths[:0])
 	for _, p := range s.paths {
 		for _, pp := range p {
 			ftls = append(ftls, search.FieldTermLocation{
@@ -491,7 +493,7 @@ func findPhrasePaths(prevPos uint64, ap search.ArrayPositions, phraseTerms [][]s
 
 				// this location works, add it to the path (but not for empty term)
 				px := append(p, phrasePart{term: carTerm, loc: loc})
-				rv = findPhrasePaths(loc.Pos, loc.ArrayPositions, cdr, tlm, px, remainingSlop-dist, rv)
+				rv = findPhrasePaths(loc.Pos, loc.ArrayPositions, cdr, tlm, px, remainingSlop, rv)
 			}
 		}
 	}
