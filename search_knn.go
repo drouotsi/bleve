@@ -23,11 +23,11 @@ import (
 	"fmt"
 	"sort"
 
+	index "github.com/blevesearch/bleve_index_api"
 	"github.com/drouotsi/bleve/v2/document"
 	"github.com/drouotsi/bleve/v2/search"
 	"github.com/drouotsi/bleve/v2/search/collector"
 	"github.com/drouotsi/bleve/v2/search/query"
-	index "github.com/drouotsi/bleve_index_api"
 )
 
 const supportForVectorSearch = true

@@ -27,11 +27,11 @@ import (
 	"sync/atomic"
 
 	"github.com/RoaringBitmap/roaring/v2"
-	"github.com/drouotsi/bleve/v2/document"
-	index "github.com/drouotsi/bleve_index_api"
+	index "github.com/blevesearch/bleve_index_api"
 	segment "github.com/blevesearch/scorch_segment_api/v2"
 	"github.com/blevesearch/vellum"
 	lev "github.com/blevesearch/vellum/levenshtein"
+	"github.com/drouotsi/bleve/v2/document"
 	bolt "go.etcd.io/bbolt"
 )
 

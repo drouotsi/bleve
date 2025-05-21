@@ -23,9 +23,9 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/drouotsi/bleve/v2/search"
-	index "github.com/drouotsi/bleve_index_api"
+	index "github.com/blevesearch/bleve_index_api"
 	segment_api "github.com/blevesearch/scorch_segment_api/v2"
+	"github.com/drouotsi/bleve/v2/search"
 )
 
 type OptimizeVR struct {

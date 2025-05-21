@@ -27,6 +27,7 @@ import (
 	"testing"
 	"time"
 
+	index "github.com/blevesearch/bleve_index_api"
 	"github.com/drouotsi/bleve/v2/analysis"
 	"github.com/drouotsi/bleve/v2/analysis/analyzer/custom"
 	"github.com/drouotsi/bleve/v2/analysis/analyzer/keyword"
@@ -57,7 +58,6 @@ import (
 	"github.com/drouotsi/bleve/v2/search/highlight/highlighter/ansi"
 	"github.com/drouotsi/bleve/v2/search/highlight/highlighter/html"
 	"github.com/drouotsi/bleve/v2/search/query"
-	index "github.com/drouotsi/bleve_index_api"
 )
 
 func TestSortedFacetedQuery(t *testing.T) {

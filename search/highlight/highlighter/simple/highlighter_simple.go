@@ -18,7 +18,7 @@ import (
 	"container/heap"
 	"fmt"
 
-	index "github.com/drouotsi/bleve_index_api"
+	index "github.com/blevesearch/bleve_index_api"
 
 	"github.com/drouotsi/bleve/v2/registry"
 	"github.com/drouotsi/bleve/v2/search"

@@ -17,11 +17,11 @@ package bleve
 import (
 	"fmt"
 
+	index "github.com/blevesearch/bleve_index_api"
 	"github.com/drouotsi/bleve/v2/document"
 	"github.com/drouotsi/bleve/v2/index/scorch"
 	"github.com/drouotsi/bleve/v2/mapping"
 	"github.com/drouotsi/bleve/v2/util"
-	index "github.com/drouotsi/bleve_index_api"
 )
 
 type builderImpl struct {

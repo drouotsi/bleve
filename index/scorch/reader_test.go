@@ -20,8 +20,8 @@ import (
 	"reflect"
 	"testing"
 
+	index "github.com/blevesearch/bleve_index_api"
 	"github.com/drouotsi/bleve/v2/document"
-	index "github.com/drouotsi/bleve_index_api"
 )
 
 func TestIndexReader(t *testing.T) {

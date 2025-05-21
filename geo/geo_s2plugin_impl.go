@@ -18,10 +18,10 @@ import (
 	"encoding/json"
 	"sync"
 
-	"github.com/drouotsi/bleve/v2/util"
-	index "github.com/drouotsi/bleve_index_api"
+	index "github.com/blevesearch/bleve_index_api"
 	"github.com/blevesearch/geo/geojson"
 	"github.com/blevesearch/geo/s2"
+	"github.com/drouotsi/bleve/v2/util"
 )
 
 const (

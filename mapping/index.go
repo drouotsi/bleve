@@ -18,13 +18,13 @@ import (
 	"encoding/json"
 	"fmt"
 
+	index "github.com/blevesearch/bleve_index_api"
 	"github.com/drouotsi/bleve/v2/analysis"
 	"github.com/drouotsi/bleve/v2/analysis/analyzer/standard"
 	"github.com/drouotsi/bleve/v2/analysis/datetime/optional"
 	"github.com/drouotsi/bleve/v2/document"
 	"github.com/drouotsi/bleve/v2/registry"
 	"github.com/drouotsi/bleve/v2/util"
-	index "github.com/drouotsi/bleve_index_api"
 )
 
 var MappingJSONStrict = false

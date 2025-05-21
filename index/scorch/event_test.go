@@ -17,8 +17,8 @@ package scorch
 import (
 	"testing"
 
+	index "github.com/blevesearch/bleve_index_api"
 	"github.com/drouotsi/bleve/v2/document"
-	index "github.com/drouotsi/bleve_index_api"
 )
 
 func TestEventBatchIntroductionStart(t *testing.T) {

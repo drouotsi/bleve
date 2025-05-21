@@ -17,7 +17,7 @@ package mapping
 import (
 	"encoding/json"
 	"fmt"
-	index "github.com/drouotsi/bleve_index_api"
+	index "github.com/blevesearch/bleve_index_api"
 	"reflect"
 	"strconv"
 	"testing"

@@ -25,6 +25,7 @@ import (
 	"testing"
 	"time"
 
+	index "github.com/blevesearch/bleve_index_api"
 	"github.com/drouotsi/bleve/v2/analysis"
 	"github.com/drouotsi/bleve/v2/analysis/analyzer/standard"
 	regexpTokenizer "github.com/drouotsi/bleve/v2/analysis/tokenizer/regexp"
@@ -32,7 +33,6 @@ import (
 	"github.com/drouotsi/bleve/v2/index/upsidedown/store/boltdb"
 	"github.com/drouotsi/bleve/v2/index/upsidedown/store/null"
 	"github.com/drouotsi/bleve/v2/registry"
-	index "github.com/drouotsi/bleve_index_api"
 )
 
 var testAnalyzer = &analysis.DefaultAnalyzer{

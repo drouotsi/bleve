@@ -18,11 +18,11 @@ import (
 	"bytes"
 	"context"
 
-	"github.com/drouotsi/bleve/v2/geo"
-	"github.com/drouotsi/bleve/v2/search"
-	index "github.com/drouotsi/bleve_index_api"
+	index "github.com/blevesearch/bleve_index_api"
 	"github.com/blevesearch/geo/geojson"
 	"github.com/blevesearch/geo/s2"
+	"github.com/drouotsi/bleve/v2/geo"
+	"github.com/drouotsi/bleve/v2/search"
 )
 
 func NewGeoShapeSearcher(ctx context.Context, indexReader index.IndexReader, shape index.GeoJSON,

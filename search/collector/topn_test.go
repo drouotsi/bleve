@@ -19,10 +19,10 @@ import (
 	"context"
 	"testing"
 
+	index "github.com/blevesearch/bleve_index_api"
 	"github.com/drouotsi/bleve/v2/index/scorch"
 	"github.com/drouotsi/bleve/v2/search"
 	"github.com/drouotsi/bleve/v2/search/facet"
-	index "github.com/drouotsi/bleve_index_api"
 )
 
 func TestTop10Scores(t *testing.T) {

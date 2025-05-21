@@ -17,7 +17,7 @@ package upsidedown
 import (
 	"fmt"
 
-	index "github.com/drouotsi/bleve_index_api"
+	index "github.com/blevesearch/bleve_index_api"
 	store "github.com/blevesearch/upsidedown_store_api"
 )
 

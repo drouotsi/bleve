@@ -30,6 +30,7 @@ import (
 	"testing"
 	"time"
 
+	index "github.com/blevesearch/bleve_index_api"
 	"github.com/drouotsi/bleve/v2/analysis"
 	"github.com/drouotsi/bleve/v2/analysis/analyzer/keyword"
 	"github.com/drouotsi/bleve/v2/analysis/analyzer/standard"
@@ -37,7 +38,6 @@ import (
 	"github.com/drouotsi/bleve/v2/document"
 	"github.com/drouotsi/bleve/v2/index/scorch/mergeplan"
 	"github.com/drouotsi/bleve/v2/mapping"
-	index "github.com/drouotsi/bleve_index_api"
 )
 
 func init() {

@@ -20,11 +20,11 @@ import (
 	"math"
 	"time"
 
+	index "github.com/blevesearch/bleve_index_api"
 	"github.com/drouotsi/bleve/v2/mapping"
 	"github.com/drouotsi/bleve/v2/numeric"
 	"github.com/drouotsi/bleve/v2/search"
 	"github.com/drouotsi/bleve/v2/search/searcher"
-	index "github.com/drouotsi/bleve_index_api"
 )
 
 // DateRangeStringQuery represents a query for a range of date values.

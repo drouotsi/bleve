@@ -20,13 +20,13 @@ import (
 	"net"
 	"time"
 
+	index "github.com/blevesearch/bleve_index_api"
+	"github.com/blevesearch/geo/geojson"
 	"github.com/drouotsi/bleve/v2/analysis"
 	"github.com/drouotsi/bleve/v2/analysis/analyzer/keyword"
 	"github.com/drouotsi/bleve/v2/document"
 	"github.com/drouotsi/bleve/v2/geo"
 	"github.com/drouotsi/bleve/v2/util"
-	index "github.com/drouotsi/bleve_index_api"
-	"github.com/blevesearch/geo/geojson"
 )
 
 // control the default behavior for dynamic fields (those not explicitly mapped)

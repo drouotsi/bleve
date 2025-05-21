@@ -18,8 +18,8 @@ import (
 	"context"
 	"regexp"
 
+	index "github.com/blevesearch/bleve_index_api"
 	"github.com/drouotsi/bleve/v2/search"
-	index "github.com/drouotsi/bleve_index_api"
 )
 
 // The Regexp interface defines the subset of the regexp.Regexp API

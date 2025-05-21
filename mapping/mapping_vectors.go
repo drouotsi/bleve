@@ -21,10 +21,10 @@ import (
 	"fmt"
 	"reflect"
 
+	index "github.com/blevesearch/bleve_index_api"
+	faiss "github.com/blevesearch/go-faiss"
 	"github.com/drouotsi/bleve/v2/document"
 	"github.com/drouotsi/bleve/v2/util"
-	index "github.com/drouotsi/bleve_index_api"
-	faiss "github.com/blevesearch/go-faiss"
 )
 
 // Min and Max allowed dimensions for a vector field;

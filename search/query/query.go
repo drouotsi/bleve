@@ -22,12 +22,12 @@ import (
 	"log"
 	"strings"
 
+	index "github.com/blevesearch/bleve_index_api"
 	"github.com/drouotsi/bleve/v2/analysis"
 	"github.com/drouotsi/bleve/v2/mapping"
 	"github.com/drouotsi/bleve/v2/search"
 	"github.com/drouotsi/bleve/v2/search/searcher"
 	"github.com/drouotsi/bleve/v2/util"
-	index "github.com/drouotsi/bleve_index_api"
 )
 
 var logger = log.New(io.Discard, "bleve mapping ", log.LstdFlags)

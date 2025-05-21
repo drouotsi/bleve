@@ -25,6 +25,8 @@ import (
 	"sync/atomic"
 	"time"
 
+	index "github.com/blevesearch/bleve_index_api"
+	"github.com/blevesearch/geo/s2"
 	"github.com/drouotsi/bleve/v2/analysis/datetime/timestamp/microseconds"
 	"github.com/drouotsi/bleve/v2/analysis/datetime/timestamp/milliseconds"
 	"github.com/drouotsi/bleve/v2/analysis/datetime/timestamp/nanoseconds"
@@ -40,8 +42,6 @@ import (
 	"github.com/drouotsi/bleve/v2/search/highlight"
 	"github.com/drouotsi/bleve/v2/search/query"
 	"github.com/drouotsi/bleve/v2/util"
-	index "github.com/drouotsi/bleve_index_api"
-	"github.com/blevesearch/geo/s2"
 )
 
 type indexImpl struct {
