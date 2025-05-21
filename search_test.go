@@ -27,37 +27,37 @@ import (
 	"testing"
 	"time"
 
-	"github.com/blevesearch/bleve/v2/analysis"
-	"github.com/blevesearch/bleve/v2/analysis/analyzer/custom"
-	"github.com/blevesearch/bleve/v2/analysis/analyzer/keyword"
-	"github.com/blevesearch/bleve/v2/analysis/analyzer/simple"
-	"github.com/blevesearch/bleve/v2/analysis/analyzer/standard"
-	html_char_filter "github.com/blevesearch/bleve/v2/analysis/char/html"
-	regexp_char_filter "github.com/blevesearch/bleve/v2/analysis/char/regexp"
-	"github.com/blevesearch/bleve/v2/analysis/datetime/flexible"
-	"github.com/blevesearch/bleve/v2/analysis/datetime/iso"
-	"github.com/blevesearch/bleve/v2/analysis/datetime/percent"
-	"github.com/blevesearch/bleve/v2/analysis/datetime/sanitized"
-	"github.com/blevesearch/bleve/v2/analysis/datetime/timestamp/microseconds"
-	"github.com/blevesearch/bleve/v2/analysis/datetime/timestamp/milliseconds"
-	"github.com/blevesearch/bleve/v2/analysis/datetime/timestamp/nanoseconds"
-	"github.com/blevesearch/bleve/v2/analysis/datetime/timestamp/seconds"
-	"github.com/blevesearch/bleve/v2/analysis/lang/en"
-	"github.com/blevesearch/bleve/v2/analysis/token/length"
-	"github.com/blevesearch/bleve/v2/analysis/token/lowercase"
-	"github.com/blevesearch/bleve/v2/analysis/token/shingle"
-	"github.com/blevesearch/bleve/v2/analysis/tokenizer/single"
-	"github.com/blevesearch/bleve/v2/analysis/tokenizer/whitespace"
-	"github.com/blevesearch/bleve/v2/document"
-	"github.com/blevesearch/bleve/v2/geo"
-	"github.com/blevesearch/bleve/v2/index/scorch"
-	"github.com/blevesearch/bleve/v2/index/upsidedown"
-	"github.com/blevesearch/bleve/v2/mapping"
-	"github.com/blevesearch/bleve/v2/search"
-	"github.com/blevesearch/bleve/v2/search/highlight/highlighter/ansi"
-	"github.com/blevesearch/bleve/v2/search/highlight/highlighter/html"
-	"github.com/blevesearch/bleve/v2/search/query"
-	index "github.com/blevesearch/bleve_index_api"
+	"github.com/drouotsi/bleve/v2/analysis"
+	"github.com/drouotsi/bleve/v2/analysis/analyzer/custom"
+	"github.com/drouotsi/bleve/v2/analysis/analyzer/keyword"
+	"github.com/drouotsi/bleve/v2/analysis/analyzer/simple"
+	"github.com/drouotsi/bleve/v2/analysis/analyzer/standard"
+	html_char_filter "github.com/drouotsi/bleve/v2/analysis/char/html"
+	regexp_char_filter "github.com/drouotsi/bleve/v2/analysis/char/regexp"
+	"github.com/drouotsi/bleve/v2/analysis/datetime/flexible"
+	"github.com/drouotsi/bleve/v2/analysis/datetime/iso"
+	"github.com/drouotsi/bleve/v2/analysis/datetime/percent"
+	"github.com/drouotsi/bleve/v2/analysis/datetime/sanitized"
+	"github.com/drouotsi/bleve/v2/analysis/datetime/timestamp/microseconds"
+	"github.com/drouotsi/bleve/v2/analysis/datetime/timestamp/milliseconds"
+	"github.com/drouotsi/bleve/v2/analysis/datetime/timestamp/nanoseconds"
+	"github.com/drouotsi/bleve/v2/analysis/datetime/timestamp/seconds"
+	"github.com/drouotsi/bleve/v2/analysis/lang/en"
+	"github.com/drouotsi/bleve/v2/analysis/token/length"
+	"github.com/drouotsi/bleve/v2/analysis/token/lowercase"
+	"github.com/drouotsi/bleve/v2/analysis/token/shingle"
+	"github.com/drouotsi/bleve/v2/analysis/tokenizer/single"
+	"github.com/drouotsi/bleve/v2/analysis/tokenizer/whitespace"
+	"github.com/drouotsi/bleve/v2/document"
+	"github.com/drouotsi/bleve/v2/geo"
+	"github.com/drouotsi/bleve/v2/index/scorch"
+	"github.com/drouotsi/bleve/v2/index/upsidedown"
+	"github.com/drouotsi/bleve/v2/mapping"
+	"github.com/drouotsi/bleve/v2/search"
+	"github.com/drouotsi/bleve/v2/search/highlight/highlighter/ansi"
+	"github.com/drouotsi/bleve/v2/search/highlight/highlighter/html"
+	"github.com/drouotsi/bleve/v2/search/query"
+	index "github.com/drouotsi/bleve_index_api"
 )
 
 func TestSortedFacetedQuery(t *testing.T) {
@@ -599,7 +599,7 @@ func TestMemoryNeededForSearchResult(t *testing.T) {
 	}
 }
 
-// https://github.com/blevesearch/bleve/issues/954
+// https://github.com/drouotsi/bleve/issues/954
 func TestNestedBooleanSearchers(t *testing.T) {
 	// create an index with a custom analyzer
 	idxMapping := NewIndexMapping()
@@ -1940,7 +1940,7 @@ func TestGeoDistanceIssue1301(t *testing.T) {
 	// Not setting "Field" for the following query, targets it against the _all
 	// field and this is returning inconsistent results, when there's another
 	// field indexed along with the geopoint which is numeric.
-	// As reported in: https://github.com/blevesearch/bleve/issues/1301
+	// As reported in: https://github.com/drouotsi/bleve/issues/1301
 	lat, lon := 22.371154, 114.112603
 	q := NewGeoDistanceQuery(lon, lat, "1km")
 

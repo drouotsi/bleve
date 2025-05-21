@@ -18,13 +18,13 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/blevesearch/bleve/v2/analysis"
-	"github.com/blevesearch/bleve/v2/analysis/analyzer/standard"
-	"github.com/blevesearch/bleve/v2/analysis/datetime/optional"
-	"github.com/blevesearch/bleve/v2/document"
-	"github.com/blevesearch/bleve/v2/registry"
-	"github.com/blevesearch/bleve/v2/util"
-	index "github.com/blevesearch/bleve_index_api"
+	"github.com/drouotsi/bleve/v2/analysis"
+	"github.com/drouotsi/bleve/v2/analysis/analyzer/standard"
+	"github.com/drouotsi/bleve/v2/analysis/datetime/optional"
+	"github.com/drouotsi/bleve/v2/document"
+	"github.com/drouotsi/bleve/v2/registry"
+	"github.com/drouotsi/bleve/v2/util"
+	index "github.com/drouotsi/bleve_index_api"
 )
 
 var MappingJSONStrict = false
@@ -105,15 +105,15 @@ func (im *IndexMappingImpl) AddCustomTokenFilter(name string, config map[string]
 // returned analyzer is registered in the IndexMapping.
 //
 // bleve comes with predefined analyzers, like
-// github.com/blevesearch/bleve/analysis/analyzer/custom. They are
+// github.com/drouotsi/bleve/analysis/analyzer/custom. They are
 // available only if their package is imported by client code. To achieve this,
 // use their metadata to fill configuration entries:
 //
 //	import (
-//	    "github.com/blevesearch/bleve/v2/analysis/analyzer/custom"
-//	    "github.com/blevesearch/bleve/v2/analysis/char/html"
-//	    "github.com/blevesearch/bleve/v2/analysis/token/lowercase"
-//	    "github.com/blevesearch/bleve/v2/analysis/tokenizer/unicode"
+//	    "github.com/drouotsi/bleve/v2/analysis/analyzer/custom"
+//	    "github.com/drouotsi/bleve/v2/analysis/char/html"
+//	    "github.com/drouotsi/bleve/v2/analysis/token/lowercase"
+//	    "github.com/drouotsi/bleve/v2/analysis/tokenizer/unicode"
 //	)
 //
 //	m := bleve.NewIndexMapping()

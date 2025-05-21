@@ -15,12 +15,12 @@
 package analysis_test
 
 import (
-	index "github.com/blevesearch/bleve_index_api"
+	index "github.com/drouotsi/bleve_index_api"
 	"testing"
 
-	"github.com/blevesearch/bleve/v2/analysis"
-	"github.com/blevesearch/bleve/v2/analysis/analyzer/standard"
-	"github.com/blevesearch/bleve/v2/registry"
+	"github.com/drouotsi/bleve/v2/analysis"
+	"github.com/drouotsi/bleve/v2/analysis/analyzer/standard"
+	"github.com/drouotsi/bleve/v2/registry"
 )
 
 func BenchmarkAnalysis(b *testing.B) {

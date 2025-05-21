@@ -25,9 +25,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/blevesearch/bleve/v2/document"
-	"github.com/blevesearch/bleve/v2/registry"
-	index "github.com/blevesearch/bleve_index_api"
+	"github.com/drouotsi/bleve/v2/document"
+	"github.com/drouotsi/bleve/v2/registry"
+	index "github.com/drouotsi/bleve_index_api"
 	store "github.com/blevesearch/upsidedown_store_api"
 
 	"github.com/golang/protobuf/proto"

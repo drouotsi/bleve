@@ -30,14 +30,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/blevesearch/bleve/v2/analysis"
-	"github.com/blevesearch/bleve/v2/analysis/analyzer/keyword"
-	"github.com/blevesearch/bleve/v2/analysis/analyzer/standard"
-	regexpTokenizer "github.com/blevesearch/bleve/v2/analysis/tokenizer/regexp"
-	"github.com/blevesearch/bleve/v2/document"
-	"github.com/blevesearch/bleve/v2/index/scorch/mergeplan"
-	"github.com/blevesearch/bleve/v2/mapping"
-	index "github.com/blevesearch/bleve_index_api"
+	"github.com/drouotsi/bleve/v2/analysis"
+	"github.com/drouotsi/bleve/v2/analysis/analyzer/keyword"
+	"github.com/drouotsi/bleve/v2/analysis/analyzer/standard"
+	regexpTokenizer "github.com/drouotsi/bleve/v2/analysis/tokenizer/regexp"
+	"github.com/drouotsi/bleve/v2/document"
+	"github.com/drouotsi/bleve/v2/index/scorch/mergeplan"
+	"github.com/drouotsi/bleve/v2/mapping"
+	index "github.com/drouotsi/bleve_index_api"
 )
 
 func init() {
@@ -2119,7 +2119,7 @@ func TestIndexDocValueReaderWithMultipleFieldOptions(t *testing.T) {
 }
 
 func TestAllFieldWithDifferentTermVectorsEnabled(t *testing.T) {
-	// Based on https://github.com/blevesearch/bleve/issues/895 from xeizmendi
+	// Based on https://github.com/drouotsi/bleve/issues/895 from xeizmendi
 	cfg := CreateConfig("TestAllFieldWithDifferentTermVectorsEnabled")
 	err := InitTest(cfg)
 	if err != nil {
@@ -2598,7 +2598,7 @@ func TestOpenBoltTimeout(t *testing.T) {
 }
 
 func TestReadOnlyIndex(t *testing.T) {
-	// https://github.com/blevesearch/bleve/issues/1623
+	// https://github.com/drouotsi/bleve/issues/1623
 	cfg := CreateConfig("TestReadOnlyIndex")
 	err := InitTest(cfg)
 	if err != nil {

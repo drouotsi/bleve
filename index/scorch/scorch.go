@@ -24,8 +24,8 @@ import (
 	"time"
 
 	"github.com/RoaringBitmap/roaring/v2"
-	"github.com/blevesearch/bleve/v2/registry"
-	index "github.com/blevesearch/bleve_index_api"
+	"github.com/drouotsi/bleve/v2/registry"
+	index "github.com/drouotsi/bleve_index_api"
 	segment "github.com/blevesearch/scorch_segment_api/v2"
 	bolt "go.etcd.io/bbolt"
 )

@@ -20,9 +20,9 @@ import (
 	"math"
 	"sort"
 
-	"github.com/blevesearch/bleve/v2/numeric"
-	"github.com/blevesearch/bleve/v2/search"
-	index "github.com/blevesearch/bleve_index_api"
+	"github.com/drouotsi/bleve/v2/numeric"
+	"github.com/drouotsi/bleve/v2/search"
+	index "github.com/drouotsi/bleve_index_api"
 )
 
 func NewNumericRangeSearcher(ctx context.Context, indexReader index.IndexReader,

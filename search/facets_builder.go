@@ -18,9 +18,9 @@ import (
 	"reflect"
 	"sort"
 
-	"github.com/blevesearch/bleve/v2/size"
-	"github.com/blevesearch/bleve/v2/util"
-	index "github.com/blevesearch/bleve_index_api"
+	"github.com/drouotsi/bleve/v2/size"
+	"github.com/drouotsi/bleve/v2/util"
+	index "github.com/drouotsi/bleve_index_api"
 )
 
 var reflectStaticSizeFacetsBuilder int

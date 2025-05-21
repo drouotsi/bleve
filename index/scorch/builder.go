@@ -20,7 +20,7 @@ import (
 	"sync"
 
 	"github.com/RoaringBitmap/roaring/v2"
-	index "github.com/blevesearch/bleve_index_api"
+	index "github.com/drouotsi/bleve_index_api"
 	segment "github.com/blevesearch/scorch_segment_api/v2"
 	bolt "go.etcd.io/bbolt"
 )

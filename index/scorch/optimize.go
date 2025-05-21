@@ -19,7 +19,7 @@ import (
 	"sync/atomic"
 
 	"github.com/RoaringBitmap/roaring/v2"
-	index "github.com/blevesearch/bleve_index_api"
+	index "github.com/drouotsi/bleve_index_api"
 	segment "github.com/blevesearch/scorch_segment_api/v2"
 )
 
@@ -382,7 +382,7 @@ func (o *OptimizeTFRDisjunctionUnadorned) Finish() (rv index.Optimized, err erro
 func (i *IndexSnapshot) unadornedTermFieldReader(
 	term []byte, field string) *IndexSnapshotTermFieldReader {
 	// This IndexSnapshotTermFieldReader will not be recycled, more
-	// conversation here: https://github.com/blevesearch/bleve/pull/1438
+	// conversation here: https://github.com/drouotsi/bleve/pull/1438
 	return &IndexSnapshotTermFieldReader{
 		term:               term,
 		field:              field,

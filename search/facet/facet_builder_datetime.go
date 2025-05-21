@@ -19,9 +19,9 @@ import (
 	"sort"
 	"time"
 
-	"github.com/blevesearch/bleve/v2/numeric"
-	"github.com/blevesearch/bleve/v2/search"
-	"github.com/blevesearch/bleve/v2/size"
+	"github.com/drouotsi/bleve/v2/numeric"
+	"github.com/drouotsi/bleve/v2/search"
+	"github.com/drouotsi/bleve/v2/size"
 )
 
 var (

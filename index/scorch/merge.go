@@ -24,8 +24,8 @@ import (
 	"time"
 
 	"github.com/RoaringBitmap/roaring/v2"
-	"github.com/blevesearch/bleve/v2/index/scorch/mergeplan"
-	"github.com/blevesearch/bleve/v2/util"
+	"github.com/drouotsi/bleve/v2/index/scorch/mergeplan"
+	"github.com/drouotsi/bleve/v2/util"
 	segment "github.com/blevesearch/scorch_segment_api/v2"
 )
 

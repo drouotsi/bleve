@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/blevesearch/bleve/v2"
-	"github.com/blevesearch/bleve/v2/mapping"
+	"github.com/drouotsi/bleve/v2"
+	"github.com/drouotsi/bleve/v2/mapping"
 	"github.com/spf13/cobra"
 )
 

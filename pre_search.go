@@ -15,7 +15,7 @@
 package bleve
 
 import (
-	"github.com/blevesearch/bleve/v2/search"
+	"github.com/drouotsi/bleve/v2/search"
 )
 
 // A preSearchResultProcessor processes the data in

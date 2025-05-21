@@ -15,7 +15,7 @@
 package analysis
 
 import (
-	index "github.com/blevesearch/bleve_index_api"
+	index "github.com/drouotsi/bleve_index_api"
 )
 
 func TokenFrequency(tokens TokenStream, arrayPositions []uint64, options index.FieldIndexingOptions) index.TokenFrequencies {

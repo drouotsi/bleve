@@ -21,11 +21,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/blevesearch/bleve/v2/document"
-	"github.com/blevesearch/bleve/v2/mapping"
-	"github.com/blevesearch/bleve/v2/numeric"
-	"github.com/blevesearch/bleve/v2/search"
-	index "github.com/blevesearch/bleve_index_api"
+	"github.com/drouotsi/bleve/v2/document"
+	"github.com/drouotsi/bleve/v2/mapping"
+	"github.com/drouotsi/bleve/v2/numeric"
+	"github.com/drouotsi/bleve/v2/search"
+	index "github.com/drouotsi/bleve_index_api"
 )
 
 func TestIndexAliasSingle(t *testing.T) {
@@ -647,7 +647,7 @@ func TestMultiSearchSomeError(t *testing.T) {
 }
 
 // TestMultiSearchAllError
-// reproduces https://github.com/blevesearch/bleve/issues/126
+// reproduces https://github.com/drouotsi/bleve/issues/126
 func TestMultiSearchAllError(t *testing.T) {
 	ei1 := &stubIndex{name: "ei1", err: fmt.Errorf("deliberate error")}
 	ei2 := &stubIndex{name: "ei2", err: fmt.Errorf("deliberate error")}

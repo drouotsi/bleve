@@ -19,9 +19,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/blevesearch/bleve/v2/index/upsidedown"
-	"github.com/blevesearch/bleve/v2/util"
-	index "github.com/blevesearch/bleve_index_api"
+	"github.com/drouotsi/bleve/v2/index/upsidedown"
+	"github.com/drouotsi/bleve/v2/util"
+	index "github.com/drouotsi/bleve_index_api"
 )
 
 const metaFilename = "index_meta.json"

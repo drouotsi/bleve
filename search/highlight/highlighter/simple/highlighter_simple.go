@@ -18,11 +18,11 @@ import (
 	"container/heap"
 	"fmt"
 
-	index "github.com/blevesearch/bleve_index_api"
+	index "github.com/drouotsi/bleve_index_api"
 
-	"github.com/blevesearch/bleve/v2/registry"
-	"github.com/blevesearch/bleve/v2/search"
-	"github.com/blevesearch/bleve/v2/search/highlight"
+	"github.com/drouotsi/bleve/v2/registry"
+	"github.com/drouotsi/bleve/v2/search"
+	"github.com/drouotsi/bleve/v2/search/highlight"
 )
 
 const Name = "simple"

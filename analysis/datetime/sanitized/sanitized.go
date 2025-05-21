@@ -19,8 +19,8 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/blevesearch/bleve/v2/analysis"
-	"github.com/blevesearch/bleve/v2/registry"
+	"github.com/drouotsi/bleve/v2/analysis"
+	"github.com/drouotsi/bleve/v2/registry"
 )
 
 const Name = "sanitizedgo"

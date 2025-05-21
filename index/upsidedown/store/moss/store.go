@@ -24,8 +24,8 @@ import (
 
 	"github.com/couchbase/moss"
 
-	"github.com/blevesearch/bleve/v2/registry"
-	"github.com/blevesearch/bleve/v2/util"
+	"github.com/drouotsi/bleve/v2/registry"
+	"github.com/drouotsi/bleve/v2/util"
 	store "github.com/blevesearch/upsidedown_store_api"
 )
 

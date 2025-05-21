@@ -23,9 +23,9 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/blevesearch/bleve/v2/geo"
-	"github.com/blevesearch/bleve/v2/numeric"
-	"github.com/blevesearch/bleve/v2/util"
+	"github.com/drouotsi/bleve/v2/geo"
+	"github.com/drouotsi/bleve/v2/numeric"
+	"github.com/drouotsi/bleve/v2/util"
 )
 
 var (
